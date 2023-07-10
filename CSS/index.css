@@ -1,0 +1,467 @@
+/* Font Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: logofont;
+  src: url("../Fonts/logofont.ttf");
+}
+
+/* Defining Colors */
+
+:root {
+  --lightPink: #ffe0ef;
+  --palePink: #eab5c5;
+  --babyPink: #f6cfe2;
+  --blushPink: #efc0d2;
+  --rosePink: #ecb3d3;
+  --warmPink: #e5afbc;
+  --hotPink: #ef8ab6;
+}
+
+#mainStrip {
+  height: 80vh;
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    #335c90,
+    #335a8e,
+    #355a8e,
+    #345588,
+    #395588,
+    #315588,
+    #2f5387,
+    #2c5084,
+    #2b4f83,
+    #2a4e82,
+    #2a4e82,
+    #2a4e82,
+    #284c80,
+    #284c80,
+    #274d7e,
+    #274d7e,
+    #274d7e,
+    #274d7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264a7e,
+    #264c7d,
+    #264c7d,
+    #264c7d,
+    #264c7d,
+    #244d83
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+#mainStripImage {
+  height: 100%;
+  aspect-ratio: calc(1421 / 1529);
+  background-image: url(../Images/MainStripImage.png);
+  background-size: contain;
+  background-position: center;
+}
+
+#mainStripSparkleTop {
+  position: absolute;
+  height: 30vh;
+  aspect-ratio: calc(282 / 1529);
+  background-image: url(../Images/SparkleLightDecor.png);
+  background-size: contain;
+  transform: rotate(180deg);
+  left: auto;
+  right: 1.5vw;
+  align-self: flex-start;
+}
+
+#mainStripSparkleBottom {
+  position: absolute;
+  height: 30vh;
+  aspect-ratio: calc(282 / 1529);
+  background-image: url(../Images/SparkleLightDecor.png);
+  background-size: contain;
+  left: calc(80vh * 1421 / 1529 + 3vw);
+  right: auto;
+  align-self: flex-end;
+}
+
+#mainStripTextbox {
+  width: calc(100vw - (80vh * 1421 / 1529) - 4.5vw);
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  margin-right: 1.5vw;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-left: calc(30vh * 282 / 1529 + 3vw);
+  padding-right: calc(30vh * 282 / 1529 + 3vw);
+}
+
+#mainStripHeading {
+  font-size: 14vh;
+  color: var(--palePink);
+  font-family: "Oswald", sans-serif;
+  text-align: right;
+}
+
+#mainStripDescription {
+  margin-top: 3vh;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 4vh;
+  font-weight: 300;
+}
+
+#mainStripBookButton {
+  height: 7vh;
+  aspect-ratio: 2.5;
+  margin-top: 7.5vh;
+  margin-bottom: 5vh;
+  border-radius: 3vh;
+  background-color: var(--lightPink);
+  font-family: "Work Sans", sans-serif;
+  font-size: 3.5vh;
+  font-weight: 600;
+  color: var(--hotPink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#servicesStrip {
+  min-height: 90vh;
+  width: 80vw;
+  border-radius: 1vw;
+  background: white;
+  margin-top: -5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+#servicesHeading {
+  font-size: 4.75vh;
+  font-family: "Oswald", sans-serif;
+  color: var(--warmPink);
+}
+
+#servicesContainer {
+  width: 90%;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.servicesItemBox {
+  width: 17.5vw;
+  aspect-ratio: 1.25;
+  border: 0.2vw dotted var(--warmPink);
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  box-sizing: border-box;
+}
+
+.servicesItemText {
+  margin-top: 2vh;
+  font-family: "Work Sans", sans-serif;
+  color: var(--warmPink);
+  font-size: calc(17.5vw / 13);
+  text-align: center;
+}
+
+#servicesAcrylicsIcon {
+  height: 70%;
+  aspect-ratio: 1;
+  background-image: url(../Images/AcrylicsIcon.png);
+  background-size: contain;
+}
+
+#servicesPolishIcon {
+  height: 70%;
+  aspect-ratio: 1;
+  background-image: url(../Images/PolishIcon.png);
+  background-size: contain;
+}
+
+#servicesGelIcon {
+  height: 70%;
+  aspect-ratio: 1;
+  background-image: url(../Images/GelIcon.png);
+  background-size: contain;
+}
+
+#servicesAcetoneIcon {
+  height: 70%;
+  aspect-ratio: 1;
+  background-image: url(../Images/AcetoneIcon.png);
+  background-size: contain;
+}
+
+#servicesPressonIcon {
+  height: 70%;
+  aspect-ratio: 1;
+  background-image: url(../Images/PressonIcon.png);
+  background-size: contain;
+}
+
+#servicesArtIcon {
+  height: 70%;
+  aspect-ratio: 1;
+  background-image: url(../Images/ArtIcon.png);
+  background-size: contain;
+}
+
+#galleryStrip {
+  width: 100%;
+  min-height: 80vh;
+  margin-top: -5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#galleryHeading {
+  font-size: 4.75vh;
+  font-family: "Oswald", sans-serif;
+  color: var(--warmPink);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#galleryContainer {
+  width: 80vw;
+  height: calc(80vh * 0.85);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#galleryNails1 {
+  height: 100%;
+  aspect-ratio: 1;
+  background-image: url(../Images/Nails1.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: inline;
+}
+
+#galleryNails2 {
+  height: 100%;
+  aspect-ratio: 1;
+  background-image: url(../Images/Nails2.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryNails3 {
+  height: 100%;
+  aspect-ratio: calc(2577 / 3615);
+  background-image: url(../Images/Nails3.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryNails4 {
+  height: 100%;
+  aspect-ratio: calc(2022 / 2147);
+  background-image: url(../Images/Nails4.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryNails5 {
+  height: 100%;
+  aspect-ratio: calc(2063 / 2400);
+  background-image: url(../Images/Nails5.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryNails6 {
+  height: 100%;
+  aspect-ratio: calc(2460 / 2907);
+  background-image: url(../Images/Nails6.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryNails7 {
+  height: 100%;
+  aspect-ratio: calc(2598 / 3065);
+  background-image: url(../Images/Nails7.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryNails8 {
+  height: 100%;
+  aspect-ratio: calc(2220 / 2549);
+  background-image: url(../Images/Nails8.heic);
+  background-size: contain;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  display: none;
+}
+
+#galleryLeft {
+  height: 7%;
+  aspect-ratio: 1;
+  background-image: url(../Images/GalleryLeft.png);
+  background-size: contain;
+  cursor: pointer;
+}
+
+#galleryRight {
+  height: 7%;
+  aspect-ratio: 1;
+  background-image: url(../Images/GalleryRight.png);
+  background-size: contain;
+  cursor: pointer;
+}
+
+#contactStrip {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#contactHeading {
+  font-size: 4.75vh;
+  font-family: "Oswald", sans-serif;
+  color: var(--warmPink);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+  height: calc(80vh * 0.95);
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  font-family: "Work Sans", sans-serif;
+  font-size: calc(80vh * 0.9 / 28);
+  line-height: 1.75;
+  color: #5f5f5f;
+  text-align: center;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formSmallInput {
+  height: 6.5vh;
+  aspect-ratio: 10;
+  background: transparent;
+  border: 0.25vh dotted #5f5f5f;
+  margin-bottom: 3vh;
+  color: var(--black);
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.25vh;
+  outline: none;
+  padding-left: calc(6.5vh * 10 * 0.025);
+}
+
+.formSmallInput::placeholder {
+  color: var(--hotPink);
+}
+
+#clear4 {
+  display: none;
+}
+
+#formMessageInput {
+  height: 25vh;
+  width: calc(6.5vh * 10);
+  resize: none;
+  padding-top: 2vh;
+}
+
+#formSendButton {
+  height: 7vh;
+  aspect-ratio: 2.5;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  border-radius: 3vh;
+  background-color: var(--warmPink);
+  font-family: "Work Sans", sans-serif;
+  font-size: 3.5vh;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+#formSendButton:hover {
+  background-color: var(--hotPink);
+}

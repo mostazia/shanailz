@@ -1,0 +1,141 @@
+/* Font Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: logofont;
+  src: url("../Fonts/logofont.ttf");
+}
+
+/* Defining Colors */
+
+:root {
+  --lightPink: #ffe0ef;
+  --palePink: #eab5c5;
+  --babyPink: #f6cfe2;
+  --blushPink: #efc0d2;
+  --rosePink: #ecb3d3;
+  --warmPink: #e5afbc;
+  --hotPink: #ef8ab6;
+}
+
+/* Remove Margins */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: overlay;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Basic CSS */
+
+.pageBody {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(180deg, white, white, var(--lightPink));
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Promo Strip CSS */
+
+#promoStrip {
+  background: var(--rosePink);
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#promoStripText {
+  font-size: 2.25vh;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+#promoStripX {
+  position: absolute;
+  right: 1vw;
+  left: auto;
+  color: white;
+  font-size: 3vh;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+/* Navbar */
+
+#navbar {
+  /* border: 2px solid salmon; */
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navbarLogo {
+  font-family: logofont;
+  color: var(--hotPink);
+  font-size: 4.75vh;
+  width: calc(6.175 * 4.75vh);
+  text-align: center;
+}
+
+#navbarMenu {
+  width: calc(2.5vh * 20);
+  margin-left: 2vw;
+  margin-right: calc(48vw - 50vh - (6.175 * 2.375vh));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: flex-start;
+  align-items: center;
+  font-size: 2.5vh;
+  font-family: "Work Sans", sans-serif;
+  color: var(--warmPink);
+}
+
+.navbarMenuLink {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--warmPink);
+  font-weight: 500;
+}
+
+.navbarMenuLink:hover {
+  color: var(--hotPink);
+}
+
+#navbarInstagramIcon {
+  height: 4vh;
+  aspect-ratio: 1;
+  background-image: url(../Images/InstagramIcon.png);
+  background-size: contain;
+  margin-right: 2vw;
+  margin-left: calc(48vw - (6.175 * 2.375vh) - 4vh);
+  cursor: pointer;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lightPink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--warmPink);
+  border-radius: 0.25vw;
+}

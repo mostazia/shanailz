@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="initial-scale=1" />
+    <title>Shanelle's Nails</title>
+    <link rel="stylesheet" href="CSS/template.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Services include acrylic nail extensions, regular polish manicures, gel manicures, soak offs, custom press on nails, and freestyle nails. Walks in upon availability and to reserve an appointment you text or direct message on Instagram @shanailzxvii."
+    />
+    <meta name="author" content="Shanelle's Nails" />
+    <meta
+      name="keywords"
+      content="Acrylics, Nails, Manicure, Press ons, Soak Offs, Gel, Gel Nails, Freestyle Nails, Polish, Nail Polish, Nail Art, Nail Artist, Nail Technician, Licensed Nail Technician, Nail Salon, Salon,"
+    />
+
+    <script id="galleryScript">
+      let unselectedImage = 1;
+      let selectedImage = 1;
+      const changeSelectedImage = (number) => {
+        selectedImage = number;
+        for (let i = 1; i < 9; i++) {
+          if (i !== number) {
+            document.getElementById("galleryNails" + i).style.display = "none";
+          } else {
+            document.getElementById("galleryNails" + i).style.display =
+              "inline";
+          }
+        }
+        if (unselectedImage != 0) {
+          setTimeout(() => {
+            if (selectedImage != 8 && unselectedImage != 0) {
+              changeSelectedImage(selectedImage + 1);
+            } else if (unselectedImage != 0) {
+              changeSelectedImage(1);
+            }
+          }, 5000);
+        }
+      };
+      setTimeout(() => {
+        changeSelectedImage(2);
+      }, 5000);
+      const changeUnselectImage = (number) => {
+        return new Promise((resolve, reject) => {
+          unselectedImage = 0;
+          if (number === 0) {
+            number = 8;
+          } else if (number === 9) {
+            number = 1;
+          }
+          resolve();
+        }).then(() => {
+          if (unselectedImage === 0) {
+            return changeSelectedImage(number);
+          }
+        });
+      };
+    </script>
+    <script id="promoScript">
+      const promoStripShow = () => {
+        document.getElementById("promoStrip").style.display = "none";
+      };
+      const date = new Date();
+      const deadline = new Date("2023-07-22");
+      if (date > deadline) {
+        document.getElementById("promoStrip").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="pageBody">
+      <div id="promoStrip">
+        <div id="promoStripText">
+          Enter Our Nail Giveaway! -
+          <a
+            href="https://www.instagram.com/p/CucbxsXRUnJ/?hl=en"
+            style="text-decoration: underline; color: white"
+            >Learn More</a
+          >
+        </div>
+        <div id="promoStripX" onClick="promoStripShow()">ⓧ</div>
+      </div>
+      <div id="navbar">
+        <div id="navbarMenu">
+          <a href="#servicesStrip" class="navbarMenuLink">Services</a>
+          <a href="#galleryStrip" class="navbarMenuLink">Gallery</a>
+          <a href="#contactStrip" class="navbarMenuLink">Contact</a>
+          <a class="navbarMenuLink">About</a>
+        </div>
+        <div id="navbarLogo">Shanelle's Nails</div>
+        <a
+          href="https://www.instagram.com/shanailzxvii/?hl=en"
+          target="_blank"
+          id="navbarInstagramIcon"
+        ></a>
+      </div>
+      <div id="mainStrip">
+        <div id="mainStripImage"></div>
+        <div id="mainStripSparkleTop"></div>
+        <div id="mainStripSparkleBottom"></div>
+        <div id="mainStripTextbox">
+          <div id="mainStripHeading">Licensed Nail Technician</div>
+          <div id="mainStripDescription">
+            Based in the High Desert and accepting new clients!
+          </div>
+          <div id="mainStripBookButton">Book</div>
+        </div>
+      </div>
+      <div id="servicesStrip">
+        <div id="servicesHeading">Services</div>
+        <div id="servicesContainer">
+          <div class="servicesItemBox">
+            <div id="servicesAcrylicsIcon"></div>
+            <div class="servicesItemText">Acrylic Nail <br />Extensions</div>
+          </div>
+          <div class="servicesItemBox">
+            <div id="servicesPolishIcon"></div>
+            <div class="servicesItemText">Regular Polish <br />Manicures</div>
+          </div>
+          <div class="servicesItemBox">
+            <div id="servicesGelIcon"></div>
+            <div class="servicesItemText">Gel Manicures</div>
+          </div>
+          <div class="servicesItemBox">
+            <div id="servicesAcetoneIcon"></div>
+            <div class="servicesItemText">Soak-Offs</div>
+          </div>
+          <div class="servicesItemBox">
+            <div id="servicesPressonIcon"></div>
+            <div class="servicesItemText">
+              Press-On <br />
+              Nails
+            </div>
+          </div>
+          <div class="servicesItemBox">
+            <div id="servicesArtIcon"></div>
+            <div class="servicesItemText">Freestyle Nails</div>
+          </div>
+        </div>
+      </div>
+      <div id="galleryStrip">
+        <div id="galleryHeading">Gallery</div>
+        <div id="galleryContainer">
+          <div
+            id="galleryLeft"
+            onClick="changeUnselectImage(selectedImage - 1)"
+          ></div>
+          <div id="galleryNails1"></div>
+          <div id="galleryNails2"></div>
+          <div id="galleryNails3"></div>
+          <div id="galleryNails4"></div>
+          <div id="galleryNails5"></div>
+          <div id="galleryNails6"></div>
+          <div id="galleryNails7"></div>
+          <div id="galleryNails8"></div>
+          <div
+            id="galleryRight"
+            onClick="changeUnselectImage(selectedImage + 1)"
+          ></div>
+        </div>
+      </div>
+      <div id="contactStrip">
+        <div id="contactHeading">Contact</div>
+        <div id="contactContainer">
+          <div class="contactBox">
+            📍: 14359 Amargosa Rd, Victorville, CA 92392<br />
+            <span href="7606843615">☎️: (760) 684-3615</span>
+            <span style="text-align: left"
+              >🕒: Monday 10:00 AM - 5:30 PM
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tuesday 12:30 PM - 5:30 PM
+              <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wednesday 12:30 PM -
+              5:30 PM<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thursday 12:30 PM - 5:30 PM
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friday 11:00 AM - 5:30 PM
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saturday 12:00 PM - 3:00 PM
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sunday CLOSED</span
+            >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53864864.661221266!2d168.8419504!3d34.51174550000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c36598eed6cf27%3A0x1c6cc4b07beaf41!2sShanelle%E2%80%99s%20Nails!5e0!3m2!1sen!2sus!4v1688973112147!5m2!1sen!2sus"
+              style="
+                border: 0.25vh solid #ecb3d3;
+                margin-top: 2vh;
+                height: 35vh;
+                width: calc(35vh * 4 / 3);
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="contactBox">
+            <form
+              id="contactForm"
+              action="https://docs.google.com/forms/u/3/d/e/1FAIpQLScUUC96FRhLXouycAyjkvoByjjAf0lt1ASpGQ9nx8whcCuEfQ/formResponse"
+              method="post"
+              target="hidden_iframe"
+            >
+              <input
+                class="formSmallInput"
+                id="clear1"
+                type="text"
+                placeholder="Name*"
+                name="entry.289539200"
+              />
+              <input
+                class="formSmallInput"
+                id="clear2"
+                type="text"
+                placeholder="Email*"
+                name="entry.1833633890"
+              />
+              <input
+                class="formSmallInput"
+                id="clear3"
+                type="text"
+                placeholder="Subject"
+                name="entry.1825692489"
+              />
+              <textarea
+                class="formSmallInput"
+                id="formMessageInput"
+                type="text"
+                placeholder="Message"
+                name="entry.966699306"
+              ></textarea>
+              <input
+                class="formSmallInput"
+                id="clear4"
+                type="text"
+                placeholder="Phone"
+                name="entry.582444107"
+              />
+              <button id="formSendButton" type="submit">Send</button>
+            </form>
+            <iframe name="hidden_iframe" style="display: none"></iframe>
+            <script>
+              document
+                .getElementById("contactForm")
+                .addEventListener("submit", function (event) {
+                  event.preventDefault();
+                  document.getElementById("contactForm").submit();
+                  setTimeout(function () {
+                    document.getElementById("clear1").value = null;
+                    document.getElementById("clear2").value = null;
+                    document.getElementById("clear3").value = null;
+                    document.getElementById("clear4").value = null;
+                    document.getElementById("formMessageInput").value = null;
+                  }, 1000); // Adjust the delay as needed
+                });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
