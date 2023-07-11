@@ -922,6 +922,7 @@
     width: 80vw;
     aspect-ratio: unset;
     padding: calc(100vw / 50 * 2 * (3 / 3));
+    box-sizing: content-box;
   }
 
   #bookLightBoxExit {
