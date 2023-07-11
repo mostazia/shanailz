@@ -276,80 +276,88 @@
   height: 100%;
   aspect-ratio: 1;
   background-image: url(../Images/Nails1.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: inline;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails2 {
   height: 100%;
   aspect-ratio: 1;
   background-image: url(../Images/Nails2.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails3 {
   height: 100%;
   aspect-ratio: calc(2577 / 3615);
   background-image: url(../Images/Nails3.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails4 {
   height: 100%;
   aspect-ratio: calc(2022 / 2147);
   background-image: url(../Images/Nails4.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails5 {
   height: 100%;
   aspect-ratio: calc(2063 / 2400);
   background-image: url(../Images/Nails5.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails6 {
   height: 100%;
   aspect-ratio: calc(2460 / 2907);
   background-image: url(../Images/Nails6.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails7 {
   height: 100%;
   aspect-ratio: calc(2598 / 3065);
   background-image: url(../Images/Nails7.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryNails8 {
   height: 100%;
   aspect-ratio: calc(2220 / 2549);
   background-image: url(../Images/Nails8.heic);
-  background-size: contain;
+  background-size: cover;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   display: none;
+  border: 0.5vh solid var(--warmPink);
 }
 
 #galleryLeft {
@@ -366,6 +374,56 @@
   background-image: url(../Images/GalleryRight.png);
   background-size: contain;
   cursor: pointer;
+}
+
+#pricingStrip {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#pricingHeading {
+  font-size: 4.75vh;
+  font-family: "Oswald", sans-serif;
+  color: var(--warmPink);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#pricingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  height: calc(80vh * 0.95);
+}
+
+.pricingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 30%;
+  font-family: "Work Sans", sans-serif;
+  font-size: calc(80vh * 0.9 / 28);
+  line-height: 1.75;
+  color: #5f5f5f;
+  text-align: left;
+}
+
+.pricingHeading2 {
+  color: var(--hotPink);
+  font-weight: 600;
+}
+
+.pricingItalics {
+  font-size: calc(80vh * 0.9 / 32);
 }
 
 #contactStrip {
@@ -409,6 +467,13 @@
   text-align: center;
 }
 
+#contactMap {
+  border: 0.25vh solid #ecb3d3;
+  margin-top: 2vh;
+  height: 45vh;
+  width: calc(45vh * 4 / 3);
+}
+
 #contactForm {
   display: flex;
   flex-direction: column;
@@ -418,7 +483,7 @@
 .formSmallInput {
   height: 6.5vh;
   aspect-ratio: 10;
-  background: transparent;
+  background: white;
   border: 0.25vh dotted #5f5f5f;
   margin-bottom: 3vh;
   color: var(--black);
@@ -464,4 +529,448 @@
 
 #formSendButton:hover {
   background-color: var(--hotPink);
+}
+
+#bookLightbox {
+  position: fixed;
+  z-index: 10;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 1vh;
+  height: 50vh;
+  aspect-ratio: 1.75;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+#bookLightBoxExit {
+  height: 3vh;
+  aspect-ratio: 1;
+  background-image: url(../Images/XButtonPink.png);
+  background-size: contain;
+  align-self: flex-end;
+}
+
+#bookLightBoxContainer {
+  width: 85%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bookLightBoxOption {
+  width: 40%;
+  aspect-ratio: 1;
+  border: 0.5vh dotted var(--warmPink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#bookLBSMS {
+  height: 50%;
+  aspect-ratio: 1;
+  background-image: url(../Images/TextMessageIcon.png);
+  background-size: contain;
+}
+
+#bookLBInsta {
+  height: 50%;
+  aspect-ratio: 1;
+  background-image: url(../Images/InstagramIcon.png);
+  background-size: contain;
+}
+
+.bookLBText {
+  font-family: "Work Sans", sans-serif;
+  font-size: calc(50vh * 1.75 * 0.85 * 0.4 * 0.085);
+  color: #5f5f5f;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+#bookLBWarning {
+  max-width: 85%;
+  font-family: "Work Sans", sans-serif;
+  font-size: calc(50vh * 1.75 * 0.85 * 0.4 * 0.075);
+  color: var(--rosePink);
+  text-align: center;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+@media screen and (min-height: 100vw) {
+  .rightAlign {
+    text-align: center;
+  }
+  #mainStrip {
+    width: 100vw;
+    height: unset;
+    aspect-ratio: 1;
+    justify-content: left;
+  }
+  #mainStripImage {
+    opacity: 35%;
+  }
+  #mainStripTextbox {
+    position: absolute;
+    width: calc(100vw - (100vw * 282 / 1529) - 3vw);
+    height: 100vw;
+    margin-right: calc(50vw * 282 / 1529 + 1.5vw);
+    margin-left: calc(50vw * 282 / 1529 + 1.5vw);
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #mainStripHeading {
+    font-size: calc(100vw / 7.75);
+    text-align: center;
+  }
+
+  #mainStripDescription {
+    margin-top: calc(100vw / 50 * 2);
+    font-size: calc((100vw / 5.5) * (4 / 14));
+    text-align: center;
+  }
+
+  #mainStripBookButton {
+    height: calc(100vw / 50 * 2 * (7 / 3));
+    margin-top: calc(100vw / 50 * 2 * (7.5 / 3));
+    margin-bottom: calc(100vw / 50 * 2 * (5 / 3));
+    border-radius: calc(100vw / 50 * 2);
+    font-size: calc(100vw / 50 * 2 * (3.5 / 3));
+  }
+  #mainStripSparkleTop {
+    position: absolute;
+    height: 50vw;
+    aspect-ratio: calc(282 / 1529);
+    background-image: url(../Images/SparkleLightDecor.png);
+    background-size: contain;
+    transform: rotate(180deg);
+    left: auto;
+    right: 1.5vw;
+    align-self: flex-start;
+  }
+  #mainStripSparkleBottom {
+    position: absolute;
+    height: 50vw;
+    aspect-ratio: calc(282 / 1529);
+    background-image: url(../Images/SparkleLightDecor.png);
+    background-size: contain;
+    left: 1.5vw;
+    right: auto;
+    align-self: flex-end;
+  }
+  #servicesStrip {
+    min-height: unset;
+    width: 90vw;
+    border-radius: 2.5vw;
+    margin-top: calc(100vw / 50 * 2 * (-5 / 3));
+    z-index: 5;
+  }
+
+  #servicesHeading {
+    margin-top: calc(100vw / 50 * 2 * (3 / 3));
+    font-size: calc(100vw / 50 * 2 * (4.75 / 3));
+  }
+
+  #servicesContainer {
+    width: 95%;
+    margin-top: calc(100vw / 50 * 2 * (5 / 3));
+  }
+
+  .servicesItemBox {
+    width: 40%;
+    aspect-ratio: calc(1 / 1.25);
+    border: 0.75vw dotted var(--warmPink);
+    margin-bottom: calc(100vw / 50 * 2 * (3 / 3));
+    padding-top: calc(100vw / 50 * 2 * (2 / 3));
+    padding-bottom: calc(100vw / 50 * 2 * (2 / 3));
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+  }
+
+  .servicesItemText {
+    margin-top: calc(100vw / 50 * 2 * (2 / 3));
+    font-size: calc(0.4 * 0.95 * 90vw / 10);
+    text-align: center;
+  }
+  #galleryStrip {
+    width: 100vw;
+    min-height: unset;
+    margin-top: calc(100vw / 50 * 2 * (-5 / 3));
+    padding-top: calc(100vw / 50 * 2 * (5 / 3));
+    padding-bottom: calc(100vw / 50 * 2 * (5 / 3));
+  }
+
+  #galleryHeading {
+    font-size: calc(100vw / 50 * 2 * (4.75 / 3));
+    margin-top: calc(100vw / 50 * 2 * (3 / 3));
+    margin-bottom: calc(100vw / 50 * 2 * (5 / 3));
+  }
+
+  #galleryContainer {
+    width: 90vw;
+    height: calc(90vw * 0.6);
+  }
+
+  #galleryNails1 {
+    height: 100%;
+    aspect-ratio: 1;
+    background-image: url(../Images/Nails1.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: inline;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryNails2 {
+    height: 100%;
+    aspect-ratio: 1;
+    background-image: url(../Images/Nails2.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: none;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryNails3 {
+    height: 100%;
+    aspect-ratio: calc(2577 / 3615);
+    background-image: url(../Images/Nails3.heic);
+    background-size: cover;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+    display: none;
+    border: 0.5vh solid var(--warmPink);
+  }
+
+  #galleryNails4 {
+    height: 100%;
+    aspect-ratio: calc(2022 / 2147);
+    background-image: url(../Images/Nails4.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: none;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryNails5 {
+    height: 100%;
+    aspect-ratio: calc(2063 / 2400);
+    background-image: url(../Images/Nails5.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: none;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryNails6 {
+    height: 100%;
+    aspect-ratio: calc(2460 / 2907);
+    background-image: url(../Images/Nails6.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: none;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryNails7 {
+    height: 100%;
+    aspect-ratio: calc(2598 / 3065);
+    background-image: url(../Images/Nails7.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: none;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryNails8 {
+    height: 100%;
+    aspect-ratio: calc(2220 / 2549);
+    background-image: url(../Images/Nails8.heic);
+    background-size: cover;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    display: none;
+    border: calc(100vw / 50 * 2 * (0.5 / 3)) solid var(--warmPink);
+  }
+
+  #galleryLeft {
+    height: unset;
+    width: 7.5vw;
+    aspect-ratio: 1;
+  }
+
+  #galleryRight {
+    height: unset;
+    min-width: 7.5vw;
+  }
+  #pricingStrip {
+    width: 100vw;
+    min-height: unset;
+    padding-top: calc(100vw / 50 * 2 * (5 / 3));
+    padding-bottom: 0;
+  }
+
+  #pricingHeading {
+    font-size: calc(100vw / 50 * 2 * (4.75 / 3));
+    margin-top: calc(100vw / 50 * 2 * (5 / 3));
+    margin-bottom: calc(100vw / 50 * 2 * (5 / 3));
+  }
+
+  #pricingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    width: 90vw;
+    height: unset;
+  }
+
+  .pricingBox {
+    align-items: center;
+    height: unset;
+    width: 100%;
+    font-size: calc(100vw / 2 * 0.075);
+    text-align: center;
+    margin-bottom: calc(100vw / 50 * 2 * (5 / 3));
+  }
+
+  .pricingItalics {
+    font-size: calc(100vw / 2 * 0.06);
+  }
+
+  #contactStrip {
+    width: 100vw;
+    min-height: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #contactHeading {
+    font-size: calc(100vw / 50 * 2 * (4.75 / 3));
+    margin-top: calc(100vw / 50 * 2 * (5 / 3));
+    margin-bottom: calc(100vw / 50 * 2 * (5 / 3));
+  }
+
+  #contactContainer {
+    flex-direction: column;
+    justify-content: unset;
+    width: 90vw;
+    height: unset;
+  }
+
+  .contactBox {
+    height: unset;
+    width: 100%;
+    font-size: calc(100vw / 2 * 0.075);
+  }
+
+  #contactMap {
+    border: 0.75vw solid #ecb3d3;
+    margin-top: calc(100vw / 50 * 2 * (2 / 3));
+    height: unset;
+    aspect-ratio: calc(4 / 3);
+    width: 100%;
+    margin-bottom: calc(100vw / 50 * 2 * (3 / 3));
+  }
+
+  .formSmallInput {
+    height: calc(100vw / 50 * 2 * (6.5 / 3));
+    aspect-ratio: 10;
+    background: white;
+    border: 0.75vw dotted #5f5f5f;
+    margin-top: calc(100vw / 50 * 2 * (3 / 3));
+    margin-bottom: 0;
+    font-size: calc(100vw / 2 * 0.075);
+    padding-left: calc(100vw / 50 * 2 * (6.5 / 3) * 10 * 0.025);
+  }
+
+  #formMessageInput {
+    height: calc(100vw / 50 * 2 * (25 / 3));
+    width: calc(100vw / 50 * 2 * (65 / 3));
+    padding-top: calc(100vw / 50 * 2 * (2 / 3));
+  }
+
+  #formSendButton {
+    height: calc(100vw / 50 * 2 * (8 / 3));
+    margin-top: calc(100vw / 50 * 2 * (3 / 3));
+    margin-bottom: calc(100vw / 50 * 2 * (3 / 3));
+    border-radius: calc(100vw / 50 * 2 * (3 / 3));
+    font-size: calc(100vw / 50 * 2 * (3.5 / 3));
+  }
+  #bookLightbox {
+    border-radius: 1.5vw;
+    height: unset;
+    width: 80vw;
+    aspect-ratio: calc(1 / 1.4);
+    padding: calc(100vw / 50 * 2 * (3 / 3));
+  }
+
+  #bookLightBoxExit {
+    height: calc(100vw / 50 * 2 * (3 / 3));
+  }
+
+  #bookLightBoxContainer {
+    width: 100%;
+    height: calc(
+      2 * 0.5 / 1.5 * 80vw + 100vw / 50 * 2 * (5 / 3) + 4 *
+        (100vw / 50 * 2 * (2 / 3))
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bookLightBoxOption {
+    width: 50%;
+    aspect-ratio: 1.5;
+    border: 0.75vw dotted var(--warmPink);
+    padding: calc(100vw / 50 * 2 * (2 / 3));
+  }
+
+  #bookLBSMS {
+    height: 70%;
+  }
+
+  #bookLBInsta {
+    height: 70%;
+  }
+
+  .bookLBText {
+    font-family: "Work Sans", sans-serif;
+    font-size: calc(100vw / 2 * 0.075);
+    color: #5f5f5f;
+    text-align: center;
+    margin-top: calc(100vw / 50 * 2 * (3 / 3));
+  }
+
+  #bookLBWarning {
+    max-width: 85%;
+    font-family: "Work Sans", sans-serif;
+    font-size: calc(100vw / 2 * 0.065);
+    color: var(--rosePink);
+    text-align: center;
+  }
+  .rightAlign {
+    text-align: center;
+  }
 }

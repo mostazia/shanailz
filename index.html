@@ -69,9 +69,20 @@
         document.getElementById("promoStrip").style.display = "none";
       }
     </script>
+    <script id="lightboxScript">
+      const lightBoxVisibility = (bool) => {
+        if (bool) {
+          document.getElementById("bookLightbox").style.display = "flex";
+          document.getElementById("indexBody").style.filter = "blur(2.5px)";
+        } else {
+          document.getElementById("bookLightbox").style.display = "none";
+          document.getElementById("indexBody").style.filter = "unset";
+        }
+      };
+    </script>
   </head>
   <body>
-    <div class="pageBody">
+    <div class="pageBody" id="indexBody">
       <div id="promoStrip">
         <div id="promoStripText">
           Enter Our Nail Giveaway! -
@@ -87,8 +98,8 @@
         <div id="navbarMenu">
           <a href="#servicesStrip" class="navbarMenuLink">Services</a>
           <a href="#galleryStrip" class="navbarMenuLink">Gallery</a>
+          <a href="#pricingStrip" class="navbarMenuLink">Pricing</a>
           <a href="#contactStrip" class="navbarMenuLink">Contact</a>
-          <a class="navbarMenuLink">About</a>
         </div>
         <div id="navbarLogo">Shanelle's Nails</div>
         <a
@@ -106,7 +117,9 @@
           <div id="mainStripDescription">
             Based in the High Desert and accepting new clients!
           </div>
-          <div id="mainStripBookButton">Book</div>
+          <div id="mainStripBookButton" onClick="lightBoxVisibility(true)">
+            Book
+          </div>
         </div>
       </div>
       <div id="servicesStrip">
@@ -162,34 +175,81 @@
           ></div>
         </div>
       </div>
+      <div id="pricingStrip">
+        <div id="pricingHeading">Pricing & Business Hours</div>
+        <div id="pricingContainer">
+          <div class="pricingBox">
+            <span class="pricingHeading2">Starting prices for Acrylics:</span>
+            X-Small - $40 <br />
+            Small - $45 <br />
+            Medium - $50 <br />
+            Long - $55 <br />
+            X-Long - $60 <br />
+            <br />
+            <span class="pricingHeading2">Starting prices for Manicures:</span>
+            Regular - $15 <br />Gel - $25
+            <br />
+            Soak-Offs - $15
+            <br />
+            Freestyle - $60
+            <br />
+            Custom Press-Ons - $45
+            <br />
+            <br />
+            <i class="pricingItalics"
+              >Note: Starting prices are for a plain one color set; any nail
+              art, gems, charms, french, ombre, etc. will be extra. Please DM or
+              Text to inquire about exact pricing.</i
+            >
+          </div>
+          <div class="pricingBox">
+            <span class="pricingHeading2">Business Hours:</span>
+            <span style="text-align: left"
+              >Monday: 10:00 AM - 5:30 PM
+              <br />
+              Tuesday: 12:30 PM - 5:30 PM
+              <br />Wednesday: 12:30 PM - 5:30 PM<br />
+              Thursday: 12:30 PM - 5:30 PM
+              <br />
+              Friday: 11:00 AM - 5:30 PM
+              <br />
+              Saturday: 12:00 PM - 3:00 PM
+              <br />
+              Sunday: CLOSED</span
+            >
+            <i class="pricingItalics"
+              ><br />Please Note: Walk-ins are welcome upon availability.
+              Cancellations and reschedules must be made at least 48 hours
+              before the scheduled appointment in order to receive a full
+              refund. A 15-minute grace period will be granted if running late;
+              past the 15 minutes, the appointment will be subject to
+              cancellation. Lastly, to ensure and maintain the quality of your
+              set, appointments may take 2-4 depending on design, so please book
+              accordingly.</i
+            >
+          </div>
+        </div>
+      </div>
       <div id="contactStrip">
         <div id="contactHeading">Contact</div>
         <div id="contactContainer">
           <div class="contactBox">
             📍: 14359 Amargosa Rd, Victorville, CA 92392<br />
-            <span href="7606843615">☎️: (760) 684-3615</span>
-            <span style="text-align: left"
-              >🕒: Monday 10:00 AM - 5:30 PM
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tuesday 12:30 PM - 5:30 PM
-              <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wednesday 12:30 PM -
-              5:30 PM<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thursday 12:30 PM - 5:30 PM
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friday 11:00 AM - 5:30 PM
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saturday 12:00 PM - 3:00 PM
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sunday CLOSED</span
-            >
+            <br />
+            <span
+              >✉️:
+              <a
+                style="color: #5f5f5f; text-decoration: none"
+                href="https://www.instagram.com/shanailzxvii/?hl=en"
+                target="_blank"
+              >
+                @shanailzxvii <br />
+                <br /> </a
+            ></span>
+            <span href="7606843615">☎️: (760) 684-3615</span><br />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53864864.661221266!2d168.8419504!3d34.51174550000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c36598eed6cf27%3A0x1c6cc4b07beaf41!2sShanelle%E2%80%99s%20Nails!5e0!3m2!1sen!2sus!4v1688973112147!5m2!1sen!2sus"
-              style="
-                border: 0.25vh solid #ecb3d3;
-                margin-top: 2vh;
-                height: 35vh;
-                width: calc(35vh * 4 / 3);
-              "
+              id="contactMap"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.6502576495004!2d-117.33249952547483!3d34.511749893329885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c36598eed6cf27%3A0x1c6cc4b07beaf41!2sShanelle%E2%80%99s%20Nails!5e0!3m2!1sen!2sus!4v1689035704287!5m2!1sen!2sus"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -257,6 +317,49 @@
             </script>
           </div>
         </div>
+      </div>
+      <div id="footer">
+        <div class="footerSection">
+          Please note that there may be sudden price, policy, and scheduling
+          changes that may not yet be reflected on the website. For live
+          updates, please refer to our Instagram (@shanailzxvii) or text us!
+        </div>
+        <div class="footerSection rightAlign">
+          Thank you for visiting! <br />
+          This website was developed and designed by
+          <a
+            href="https://stacyvazquez.com"
+            target="_blank"
+            style="text-decoration: none; color: #ef8ab6"
+            >Mostazia</a
+          >.
+          <br />
+          © Shanelle's Nails 2023
+        </div>
+      </div>
+    </div>
+    <div id="bookLightbox">
+      <div id="bookLightBoxExit" onCLick="lightBoxVisibility(false)"></div>
+      <div id="bookLightBoxContainer">
+        <a href="7606843615" class="bookLightBoxOption">
+          <div id="bookLBSMS"></div>
+          <div class="bookLBText">Text 760-684-3615</div>
+        </a>
+        <a
+          href="https://www.instagram.com/shanailzxvii/?hl=en"
+          class="bookLightBoxOption"
+        >
+          <div id="bookLBInsta"></div>
+          <div class="bookLBText">DM on Instagram @shanailzxvii</div>
+        </a>
+      </div>
+      <div id="bookLBWarning">
+        <i>
+          Please Note: We currently only accept Zelle and Cash as payment forms.
+          Additionally, a $15 deposit is required to reserve your appointment.
+          Please refer to the Prices and Business Hours section for information
+          regarding cancellations and refunds.</i
+        >
       </div>
     </div>
   </body>
